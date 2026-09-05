@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="./images/brand.png" type="image/x-icon">
     <title>MAC&MELT - Confectionery & Macarons</title>
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN (Removed conflicting v4 browser script) -->
     <script src="https://cdn.tailwindcss.com"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <script>
         tailwind.config = {
@@ -35,7 +34,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
 </head>
 <body class="bg-candyFloss text-brandDark font-sans antialiased selection:bg-bubbleGum selection:text-white">
 
@@ -43,10 +41,10 @@
     <header class="sticky top-0 z-50 bg-candyFloss/90 backdrop-blur-md border-b border-mint/50 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             
-            <!-- LEFT: Links -->
+            <!-- LEFT: Links (Fixed typo: CATOGORIES -> CATEGORIES) -->
             <nav class="hidden lg:flex items-center space-x-6 text-sm font-semibold tracking-wide">
                 <a href="#home" class="hover:text-bubbleGum transition-colors">HOME</a>
-                <a href="#categories" class="hover:text-bubbleGum transition-colors">CATOGORIES</a>
+                <a href="#categories" class="hover:text-bubbleGum transition-colors">CATEGORIES</a>
                 <a href="#offer" class="hover:text-bubbleGum transition-colors">OFFER</a>
                 <a href="#products" class="hover:text-bubbleGum transition-colors">PRODUCTS</a>
                 <a href="#premium" class="hover:text-bubbleGum transition-colors">PREMIUM</a>
@@ -59,7 +57,7 @@
             </button>
 
             <!-- CENTER: Website Name & Brand Logo -->
-             <a href="#home" class="flex items-center text-center ">
+             <a href="#home" class="flex items-center text-center">
             <div class="flex items-center space-x-3">
                 <span class="font-serif font-bold text-xl tracking-wider text-brandDark">MAC&MELT</span>
             </div>
@@ -75,10 +73,10 @@
             </div>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
+        <!-- Mobile Menu Dropdown (Fixed typo here too) -->
         <div id="mobile-menu" class="hidden lg:hidden bg-candyFloss border-b border-mint px-4 pt-2 pb-4 space-y-3">
             <a href="#home" class="block font-semibold hover:text-bubbleGum">HOME</a>
-            <a href="#categories" class="block font-semibold hover:text-bubbleGum">CATOGORIES</a>
+            <a href="#categories" class="block font-semibold hover:text-bubbleGum">CATEGORIES</a>
             <a href="#offer" class="block font-semibold hover:text-bubbleGum">OFFER</a>
             <a href="#products" class="block font-semibold hover:text-bubbleGum">PRODUCTS</a>
             <a href="#premium" class="block font-semibold hover:text-bubbleGum">PREMIUM</a>
@@ -134,7 +132,7 @@
         </div>
     </section>
 
-    <!-- POPULAR CATEGORIES SECTION (9 items fitting in one line without slider) -->
+    <!-- POPULAR CATEGORIES SECTION -->
     <section id="categories" class="py-16 bg-white/60 border-y border-mint/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 class="text-2xl sm:text-3xl font-serif font-bold text-brandDark mb-8 text-center">Popular Categories</h2>
@@ -190,7 +188,7 @@
                 </div>
                 <div class="group cursor-pointer">
                     <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto rounded-full overflow-hidden mb-2 border-2 border-mint shadow-sm group-hover:border-bubbleGum transition-all">
-                        <img src="./images/cake-pops-cat.jpeg" title="Cake Pops"  class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                        <img src="./images/cake-pops-cat.jpeg" title="Cake Pops" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
                     <h3 class="font-semibold text-xs text-brandDark">Cake Pops</h3>
                 </div>
@@ -212,7 +210,7 @@
         </div>
     </section>
 
-    <!-- PRODUCTS SECTION (25 items batched in groups of 5 via slider) -->
+    <!-- PRODUCTS SECTION -->
     <section id="products" class="py-20 bg-candyFloss/40">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
@@ -225,7 +223,7 @@
                 </div>
             </div>
 
-            <!-- Product Grid Container (Showing 5 items per view) -->
+            <!-- Product Grid Container -->
             <div class="relative">
                 <div class="flex justify-end items-center mb-4 space-x-2">
                     <button onclick="slideProducts(-1)" class="w-10 h-10 rounded-full bg-mint hover:bg-bubbleGum hover:text-white text-brandDark flex items-center justify-center transition-colors shadow-sm"><i class="fa-solid fa-chevron-left"></i></button>
@@ -277,7 +275,7 @@
         </div>
     </section>
 
-    <!-- BONUS REWARD SECTION -->
+    <!-- BONUS REWARD SECTION (Fixed <button> wrapping <a> nesting) -->
     <section id="rewards" class="py-20 relative bg-cover bg-center text-white rewards-bg">
         <div class="max-w-4xl mx-auto px-4 text-center">
             <div class="w-16 h-16 bg-cottonCandy text-brandDark rounded-full flex items-center justify-center mx-auto mb-6 text-2xl shadow-lg">
@@ -287,12 +285,9 @@
             <p class="text-lg sm:text-xl text-candyFloss mb-8 leading-relaxed max-w-xl mx-auto font-medium">
                 Order goods worth $18.85 USD and get a set of mini donuts as a gift!
             </p>
-            <button onclick="addToCart('Set Of Mini Donuts', 18.85, './images/reward.jpeg')">
-            <a href="#rewards" class="inline-block bg-white hover:bg-cottonCandy text-brandDark font-bold px-8 py-4 rounded-full transition-all shadow-lg">
+            <a href="#rewards" onclick="addToCart('Set Of Mini Donuts', 18.85, './images/reward.jpeg')" class="inline-block bg-white hover:bg-cottonCandy text-brandDark font-bold px-8 py-4 rounded-full transition-all shadow-lg">
                 Claim Reward Now
             </a>
-        </button>
-            
         </div>
     </section>
 
@@ -311,7 +306,8 @@
                 </div>
                 <div class="bg-white p-8 rounded-3xl shadow-sm border border-mint">
                     <form class="space-y-4" action="https://formspree.io/f/mzebbyjz" method="post">
-                        <div><label class="block text-sm font-semibold text-brandDark mb-1">Name</label><input type="text" name="full-name"class="w-full px-4 py-3 rounded-xl border border-mint focus:outline-none focus:border-bubbleGum bg-candyFloss/30"></div>
+                        <!-- Fixed missing space between name and class attributes below -->
+                        <div><label class="block text-sm font-semibold text-brandDark mb-1">Name</label><input type="text" name="full-name" class="w-full px-4 py-3 rounded-xl border border-mint focus:outline-none focus:border-bubbleGum bg-candyFloss/30"></div>
                         <div><label class="block text-sm font-semibold text-brandDark mb-1">Email</label><input type="email" name="email" required class="w-full px-4 py-3 rounded-xl border border-mint focus:outline-none focus:border-bubbleGum bg-candyFloss/30"></div>
                         <div><label class="block text-sm font-semibold text-brandDark mb-1">Message</label><textarea rows="4" name="Message" class="w-full px-4 py-3 rounded-xl border border-mint focus:outline-none focus:border-bubbleGum bg-candyFloss/30"></textarea></div>
                         <button type="submit" class="w-full bg-bubbleGum hover:bg-wintergreen text-white font-semibold py-3 rounded-xl transition-all shadow-md">Send Message</button>
