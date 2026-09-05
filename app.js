@@ -13,7 +13,7 @@ const allProducts = [
     { name: "Snickers Ice Cream Cake", price: 24.00, category: "Top Sellers", img: "./images/ice-cake.jpeg" },
     { name: "White & Dark Piping Glazes", price: 3.20, category: "Sale", img: "./images/donut1.jpeg" },
 
-    { name: "Galaxy Macarons", title:"Galaxy Macarons", price: 5.10, category: "New Arrivals", img: "./images/macaron4.jpeg" },
+    { name: "Galaxy Macarons", title: "Galaxy Macarons", price: 5.10, category: "New Arrivals", img: "./images/macaron4.jpeg" },
     { name: " Chocolate Hazelnut Crepe European Cake", price: 24.50, category: "Top Sellers", img: "./images/European-cake.jpeg" },
     { name: "Rainbow Vanilla Cup Cakes", price: 6.20, category: "Sale", img: "./images/cupcake3.jpeg" },
     { name: "Vanilla and Buttercream Cake Pops", price: 3.90, category: "New Arrivals", img: "./images/cakepops3.jpeg" },
@@ -31,17 +31,17 @@ const allProducts = [
     { name: "MAC&MELT Special Branded Macarons", price: 4.80, category: "Top Sellers", img: "./images/macaron3.jpeg" },
     { name: "Deep Dark Chocolate Cake", price: 30.00, category: "Sale", img: "./images/customcake2.jpeg" },
 
-    { name: "Custom Cake Pops", price: 3.75, category: "New Arrivals", img: "./images/cakepops5.jpeg" },
+    { name: "Custom Cake Pops", price: 3.75, category: "New Arrivals", img: "./images/cakepops5.jpg" }, // Fixed extension (.jpg)
     { name: "Gourmet Celebration Cupcakes", price: 4.40, category: "Top Sellers", img: "./images/cupcake5.jpeg" },
     { name: "Artisanal Donuts", price: 4.90, category: "Sale", img: "./images/donut3.jpeg" },
     { name: "Rich Chocolate Hazelnut Croissant", price: 8.90, category: "New Arrivals", img: "./images/croissant5.jpeg" },
     { name: "White & Dark Chocolate Cake Pops", price: 10.50, category: "Top Sellers", img: "./images/cakepops4.jpeg" },
 
     { name: "Pastel Macarons", price: 5.10, category: "New Arrivals", img: "./images/macaron5.jpeg" },
-    { name: "Gourmet Chocolate Donuts", price: 19.50, category: "Top Sellers", img: "./images/donut2.jpeg" }, // Fixed image path here
+    { name: "Gourmet Chocolate Donuts", price: 19.50, category: "Top Sellers", img: "./images/donut2.jpeg" },
     { name: "Colorful Cake Pops", price: 6.20, category: "Sale", img: "./images/cakepops2.jpeg" },
     { name: "Strawberry & Vanilla Donuts", price: 14.90, category: "New Arrivals", img: "./images/donut4.jpeg" },
-    { name: "Ocean Island Jelly Cake", price: 14.50, category: "Top Sellers", img: "./images/jelly-cake.jpeg" },
+    { name: "Ocean Island Jelly Cake", price: 14.50, category: "Top Sellers", img: "./images/jellycake.jpeg" }, // Fixed filename format (removed hyphen)
 ];
 
 let currentFilter = 'All';
