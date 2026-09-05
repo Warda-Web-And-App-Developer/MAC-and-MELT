@@ -1,4 +1,3 @@
-
 // Mobile menu toggle
 const menuBtn = document.getElementById('mobile-menu-btn');
 const mobileMenu = document.getElementById('mobile-menu');
@@ -14,7 +13,7 @@ const allProducts = [
     { name: "Snickers Ice Cream Cake", price: 24.00, category: "Top Sellers", img: "./images/ice-cake.jpeg" },
     { name: "White & Dark Piping Glazes", price: 3.20, category: "Sale", img: "./images/donut1.jpeg" },
 
-    { name: "Galaxy Macarons",title:"Galaxy Macarons", price: 5.10, category: "New Arrivals", img: "./images/macaron4.jpeg" },
+    { name: "Galaxy Macarons", title:"Galaxy Macarons", price: 5.10, category: "New Arrivals", img: "./images/macaron4.jpeg" },
     { name: " Chocolate Hazelnut Crepe European Cake", price: 24.50, category: "Top Sellers", img: "./images/European-cake.jpeg" },
     { name: "Rainbow Vanilla Cup Cakes", price: 6.20, category: "Sale", img: "./images/cupcake3.jpeg" },
     { name: "Vanilla and Buttercream Cake Pops", price: 3.90, category: "New Arrivals", img: "./images/cakepops3.jpeg" },
@@ -39,11 +38,10 @@ const allProducts = [
     { name: "White & Dark Chocolate Cake Pops", price: 10.50, category: "Top Sellers", img: "./images/cakepops4.jpeg" },
 
     { name: "Pastel Macarons", price: 5.10, category: "New Arrivals", img: "./images/macaron5.jpeg" },
-    { name: "Gourmet Chocolate Donuts", price: 19.50, category: "Top Sellers", img: "../images/donut2.jpeg" },
+    { name: "Gourmet Chocolate Donuts", price: 19.50, category: "Top Sellers", img: "./images/donut2.jpeg" }, // Fixed image path here
     { name: "Colorful Cake Pops", price: 6.20, category: "Sale", img: "./images/cakepops2.jpeg" },
     { name: "Strawberry & Vanilla Donuts", price: 14.90, category: "New Arrivals", img: "./images/donut4.jpeg" },
     { name: "Ocean Island Jelly Cake", price: 14.50, category: "Top Sellers", img: "./images/jelly-cake.jpeg" },
-
 ];
 
 let currentFilter = 'All';
@@ -80,11 +78,11 @@ function renderProducts() {
                 <!-- Direct Product Card Quantity Picker & Add to Cart Section -->
                 <div class="flex items-center space-x-2">
                     <div class="flex items-center border border-mint rounded-xl overflow-hidden bg-candyFloss/30">
-                        <button onclick="adjustCardQty('${p.name}', -1)" class="px-2.5 py-2 text-brandDark hover:bg-mint transition-colors font-bold text-xs">-</button>
+                        <button type="button" onclick="adjustCardQty('${p.name.replace(/'/g, "\\'")}', -1)" class="px-2.5 py-2 text-brandDark hover:bg-mint transition-colors font-bold text-xs">-</button>
                         <span id="qty-${p.name.replace(/[^a-zA-Z0-9]/g, '')}" class="px-2 text-xs font-semibold">1</span>
-                        <button onclick="adjustCardQty('${p.name}', 1)" class="px-2.5 py-2 text-brandDark hover:bg-mint transition-colors font-bold text-xs">+</button>
+                        <button type="button" onclick="adjustCardQty('${p.name.replace(/'/g, "\\'")}', 1)" class="px-2.5 py-2 text-brandDark hover:bg-mint transition-colors font-bold text-xs">+</button>
                     </div>
-                    <button onclick="addSelectedToCart('${p.name}', ${p.price}, '${p.img}')" class="flex-1 bg-mint hover:bg-bubbleGum text-brandDark hover:text-white font-semibold py-2 px-3 rounded-xl transition-colors text-xs text-center shadow-sm">
+                    <button type="button" onclick="addSelectedToCart('${p.name.replace(/'/g, "\\'")}', ${p.price}, '${p.img}')" class="flex-1 bg-mint hover:bg-bubbleGum text-brandDark hover:text-white font-semibold py-2 px-3 rounded-xl transition-colors text-xs text-center shadow-sm">
                         Add to Cart
                     </button>
                 </div>
@@ -109,7 +107,7 @@ function filterProducts(category) {
     document.querySelectorAll('.product-tab').forEach(tab => {
         if (tab.innerText.toLowerCase() === category.toLowerCase()) {
             tab.classList.remove('text-gray-500');
-            tab.classList.add('text-bubbleGum', 'border-b-2', 'border-bubbleGum');
+            tab.classList.add('text-bubbleGum', 'break-normal', 'border-b-2', 'border-bubbleGum');
         } else {
             tab.classList.remove('text-bubbleGum', 'border-b-2', 'border-bubbleGum');
             tab.classList.add('text-gray-500');
@@ -188,7 +186,8 @@ function updateCartUI() {
     const badge = document.getElementById('cart-badge');
     const totalElement = document.getElementById('cart-total');
 
-    badge.innerText = cart.reduce((sum, i) => sum + i.quantity, 0);
+    if (badge) badge.innerText = cart.reduce((sum, i) => sum + i.quantity, 0);
+    if (!container || !totalElement) return;
 
     if (cart.length === 0) {
         container.innerHTML = '<p class="text-gray-500 text-center py-8">Your cart is currently empty.</p>';
@@ -206,12 +205,12 @@ function updateCartUI() {
                     <h4 class="font-serif font-bold text-xs text-brandDark truncate">${item.name}</h4>
                     <p class="text-xs text-bubbleGum font-bold">$${(item.price * item.quantity).toFixed(2)}</p>
                     <div class="flex items-center space-x-2 mt-1">
-                        <button onclick="changeQuantity(${index}, -1)" class="w-6 h-6 bg-mint/50 hover:bg-bubbleGum hover:text-white rounded-md flex items-center justify-center text-xs font-bold transition-colors">-</button>
+                        <button type="button" onclick="changeQuantity(${index}, -1)" class="w-6 h-6 bg-mint/50 hover:bg-bubbleGum hover:text-white rounded-md flex items-center justify-center text-xs font-bold transition-colors">-</button>
                         <span class="text-xs font-semibold">${item.quantity}</span>
-                        <button onclick="changeQuantity(${index}, 1)" class="w-6 h-6 bg-mint/50 hover:bg-bubbleGum hover:text-white rounded-md flex items-center justify-center text-xs font-bold transition-colors">+</button>
+                        <button type="button" onclick="changeQuantity(${index}, 1)" class="w-6 h-6 bg-mint/50 hover:bg-bubbleGum hover:text-white rounded-md flex items-center justify-center text-xs font-bold transition-colors">+</button>
                     </div>
                 </div>
-                <button onclick="removeFromCart(${index})" class="text-gray-400 hover:text-bubbleGum p-2 transition-colors shrink-0" title="Remove item">
+                <button type="button" onclick="removeFromCart(${index})" class="text-gray-400 hover:text-bubbleGum p-2 transition-colors shrink-0" title="Remove item">
                     <i class="fa-solid fa-xmark text-base"></i>
                 </button>
             </div>
