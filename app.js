@@ -39,10 +39,10 @@ const allProducts = [
     { name: "White & Dark Chocolate Cake Pops", price: 10.50, category: "Top Sellers", img: "./images/cakepops4.jpeg" },
 
     { name: "Pastel Macarons", price: 5.10, category: "New Arrivals", img: "./images/macaron5.jpeg" },
-    { name: "Gourmet Chocolate Donuts", price: 19.50, category: "Top Sellers", img: "./images/jelly-cake.jpeg" },
-    { name: "Colorful Cake Pops", price: 6.20, category: "Sale", img: "./images/donut2.jpeg" },
-    { name: "Strawberry & Vanilla Donuts", price: 14.90, category: "New Arrivals", img: "./images/cakepops2.jpeg" },
-    { name: "Ocean Island Jelly Cake", price: 14.50, category: "Top Sellers", img: "./images/donut4.jpeg" },
+    { name: "Gourmet Chocolate Donuts", price: 19.50, category: "Top Sellers", img: "../images/donut2.jpeg" },
+    { name: "Colorful Cake Pops", price: 6.20, category: "Sale", img: "./images/cakepops2.jpeg" },
+    { name: "Strawberry & Vanilla Donuts", price: 14.90, category: "New Arrivals", img: "./images/donut4.jpeg" },
+    { name: "Ocean Island Jelly Cake", price: 14.50, category: "Top Sellers", img: "./images/jelly-cake.jpeg" },
 
 ];
 
