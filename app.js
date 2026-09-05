@@ -31,7 +31,7 @@ const allProducts = [
     { name: "MAC&MELT Special Branded Macarons", price: 4.80, category: "Top Sellers", img: "./images/macaron3.jpeg" },
     { name: "Deep Dark Chocolate Cake", price: 30.00, category: "Sale", img: "./images/customcake2.jpeg" },
 
-    { name: "Custom Cake Pops", price: 3.75, category: "New Arrivals", img: "./images/cakepops5.jpg" }, // Fixed extension (.jpg)
+    { name: "Custom Cake Pops", price: 3.75, category: "New Arrivals", img: "./images/cakepops5.jpeg" },
     { name: "Gourmet Celebration Cupcakes", price: 4.40, category: "Top Sellers", img: "./images/cupcake5.jpeg" },
     { name: "Artisanal Donuts", price: 4.90, category: "Sale", img: "./images/donut3.jpeg" },
     { name: "Rich Chocolate Hazelnut Croissant", price: 8.90, category: "New Arrivals", img: "./images/croissant5.jpeg" },
@@ -41,7 +41,7 @@ const allProducts = [
     { name: "Gourmet Chocolate Donuts", price: 19.50, category: "Top Sellers", img: "./images/donut2.jpeg" },
     { name: "Colorful Cake Pops", price: 6.20, category: "Sale", img: "./images/cakepops2.jpeg" },
     { name: "Strawberry & Vanilla Donuts", price: 14.90, category: "New Arrivals", img: "./images/donut4.jpeg" },
-    { name: "Ocean Island Jelly Cake", price: 14.50, category: "Top Sellers", img: "./images/jellycake.jpeg" }, // Fixed filename format (removed hyphen)
+    { name: "Ocean Island Jelly Cake", price: 14.50, category: "Top Sellers", img: "./images/jelly-cake.jpeg" },
 ];
 
 let currentFilter = 'All';
